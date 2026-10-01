@@ -1,12 +1,24 @@
 {
   "name": "rangoli-homes",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "description": "RangoliHomes Luxury Japandi Interior Design Platform",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build:client": "cd client && npm run build",
+    "build": "npm run build:client",
+    "start": "cd server && node src/server.js"
   },
-  "keywords": [],
+  "keywords": [
+    "interior-design",
+    "japandi",
+    "full-stack",
+    "react",
+    "express"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
